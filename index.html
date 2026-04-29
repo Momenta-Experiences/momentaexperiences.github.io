@@ -4,58 +4,168 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Momenta Experiences</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  />
+
+  <!-- Free Google Fonts: Playfair Display + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo" aria-label="Momenta Experiences home">
-        <img src="momenta_experiences_logo_cropped.svg" alt="Momenta Experiences logo" />
-      </a>
+    <a class="logo" href="#home" aria-label="Momenta Experiences home">
+      <span class="logo-primary">MOMENTA</span>
+      <span class="logo-line">
+        <span></span>
+        <em>experiences</em>
+        <span></span>
+      </span>
+    </a>
 
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="index.html" class="active">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a class="nav-button" href="#inquire">Inquire</a>
+    </nav>
+
+    <button class="mobile-menu" aria-label="Open navigation">Menu</button>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-content">
-        <p class="eyebrow">Momenta Experiences</p>
-        <h1>Creating moments that stay with you.</h1>
-        <p class="hero-text">
-          Curated experiences shaped with elegance, warmth, and a refined sense
-          of detail. We craft memorable occasions that feel timeless.
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">We design</p>
+        <h1>
+          Experiences<br />
+          <span>that stay with you.</span>
+        </h1>
+        <p class="hero-copy">
+          From high-energy fitness events to life’s most meaningful milestones,
+          we create intentional experiences that leave lasting memories.
         </p>
-        <a href="gallery.html" class="btn">Explore Gallery</a>
+        <a class="button button-light" href="#inquire">Let’s create</a>
       </div>
     </section>
 
-    <section class="intro-section">
-      <div class="container intro-card">
-        <p class="eyebrow">Welcome</p>
-        <h2>An editorial approach to meaningful experiences</h2>
-        <p>
-          Momenta Experiences brings together beauty, atmosphere, and thoughtful
-          detail to create occasions that feel personal, elevated, and lasting.
-        </p>
+    <section id="services" class="section services">
+      <p class="eyebrow centered">What we do</p>
+      <h2>Thoughtful planning.<br /><span>Memorable experiences.</span></h2>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="image-card fitness"></div>
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M5 12H3m18 0h-2M7 8v8m10-8v8M9 10h6m-6 4h6M6 9h1m10 0h1M6 15h1m10 0h1"/>
+            </svg>
+          </div>
+          <h3>Fitness & Wellness</h3>
+          <p>High-energy events that inspire movement, connection and community.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="image-card celebrations"></div>
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3v5m0 8v5M4.5 7.5l3.5 3.5m8 2l3.5 3.5M3 12h5m8 0h5M4.5 16.5 8 13m8-2 3.5-3.5"/>
+              <path d="M12 8.5 13.3 11 16 12l-2.7 1L12 15.5 10.7 13 8 12l2.7-1L12 8.5Z"/>
+            </svg>
+          </div>
+          <h3>Celebrations</h3>
+          <p>Birthdays, milestones and special moments — beautifully brought to life.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="image-card weddings"></div>
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <circle cx="9" cy="13" r="4"/>
+              <circle cx="15" cy="13" r="4"/>
+              <path d="M9 9.2 11 5h2l2 4.2"/>
+            </svg>
+          </div>
+          <h3>Weddings</h3>
+          <p>Timeless weddings designed with intention, style and heart.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="image-card custom"></div>
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3 14.6 9.4 21 12l-6.4 2.6L12 21l-2.6-6.4L3 12l6.4-2.6L12 3Z"/>
+            </svg>
+          </div>
+          <h3>Custom Experiences</h3>
+          <p>Tailored experiences curated around your vision, your people, your story.</p>
+        </article>
       </div>
+    </section>
+
+    <section id="about" class="split-section">
+      <div class="split-copy">
+        <p class="eyebrow">We believe</p>
+        <h2>It’s not just an event.<br /><span>It’s a moment that matters.</span></h2>
+        <p>
+          At Momenta Experiences, every detail is considered to create an atmosphere
+          of beauty, connection and lasting impression. Our passion is crafting seamless,
+          meaningful experiences that feel effortless and unforgettable.
+        </p>
+        <a class="text-link" href="#inquire">Start your experience →</a>
+      </div>
+
+      <div class="split-image">
+        <div class="brand-card">
+          <span class="brand-card-logo">MOMENTA</span>
+          <span class="brand-card-sub">experiences</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="inquire" class="cta">
+      <p class="eyebrow centered">Ready to begin?</p>
+      <h2>Let’s create an experience your guests will remember.</h2>
+      <a class="button button-dark" href="mailto:hello@momentaexperiences.com">Inquire now</a>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2026 Momenta Experiences By Gurleen Suri</p>
+  <footer class="footer">
+    <div class="footer-card">
+      <span class="footer-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M20.8 4.6c-1.8-1.7-4.7-1.5-6.4.4L12 7.6 9.6 5C7.9 3.1 5 2.9 3.2 4.6 1.2 6.5 1.1 9.7 3 11.7l9 8.8 9-8.8c1.9-2 1.8-5.2-.2-7.1Z"/>
+        </svg>
+      </span>
+      <div>
+        <strong>Experienced & Passionate</strong>
+        <span>We care deeply about every detail.</span>
+      </div>
+    </div>
+
+    <div class="footer-card">
+      <span class="footer-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M21 11.5a8.4 8.4 0 0 1-9 8.3 8.8 8.8 0 0 1-3.8-.9L3 20l1.2-4.5A8.2 8.2 0 0 1 3 11.5C3 6.8 7 3 12 3s9 3.8 9 8.5Z"/>
+          <path d="M8 11.5h.01M12 11.5h.01M16 11.5h.01"/>
+        </svg>
+      </span>
+      <div>
+        <strong>Personalized Approach</strong>
+        <span>Your vision, our expertise.</span>
+      </div>
+    </div>
+
+    <div class="footer-card">
+      <span class="footer-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 3 14.8 9.2 21 12l-6.2 2.8L12 21l-2.8-6.2L3 12l6.2-2.8L12 3Z"/>
+        </svg>
+      </span>
+      <div>
+        <strong>Unforgettable Impact</strong>
+        <span>Memories that last a lifetime.</span>
+      </div>
     </div>
   </footer>
 </body>
