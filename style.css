@@ -236,10 +236,10 @@ a {
 }
 
 .image-card {
-  min-height: 132px;
+  min-height: 154px;
   background-size: cover;
   background-position: center;
-  filter: saturate(1.08) contrast(1.02);
+  filter: saturate(1.04) contrast(1.02);
 }
 
 .fitness {
@@ -531,64 +531,79 @@ a {
 .inquire-page {
   min-height: calc(100vh - 93px);
   padding: clamp(44px, 6vw, 76px) 7vw;
-  background: var(--cream);
+  background:
+    radial-gradient(circle at 18% 20%, rgba(198, 168, 125, 0.16), transparent 30%),
+    var(--cream);
 }
 
 .inquire-layout {
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: clamp(28px, 4vw, 54px);
-  max-width: 1500px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: clamp(24px, 4vw, 52px);
+  max-width: var(--max-width);
   margin: 0 auto;
   align-items: stretch;
 }
 
 .inquire-card {
-  min-height: 640px;
+  min-height: 590px;
   padding: clamp(42px, 6vw, 76px);
   background: var(--sand);
-  border: 1px solid rgba(17, 17, 17, 0.11);
+  border: 1px solid rgba(17, 17, 17, 0.10);
+  box-shadow: 0 22px 60px rgba(17, 17, 17, 0.06);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
+  position: relative;
 }
+
 
 .inquire-card .eyebrow {
   color: var(--gold);
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 
 .inquire-card h1 {
   margin: 0;
-  font-family: var(--serif);
-  font-size: clamp(3.4rem, 6vw, 6.2rem);
-  font-weight: 600;
-  letter-spacing: -0.06em;
-  line-height: 0.96;
   color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(3.1rem, 6vw, 5.6rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.96;
+}
+
+.inquire-card h1 span {
+  font-style: italic;
+  font-weight: 400;
 }
 
 .inquire-card p:not(.eyebrow) {
-  max-width: 650px;
-  margin: 30px 0 36px;
-  color: rgba(17, 17, 17, 0.68);
-  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
-  line-height: 1.48;
+  max-width: 560px;
+  margin: 28px 0 34px;
+  color: rgba(17, 17, 17, 0.72);
+  font-family: var(--sans);
+  font-size: clamp(1rem, 1.3vw, 1.12rem);
+  line-height: 1.65;
 }
 
 .inquire-email {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 325px;
-  padding: 22px 30px;
+  min-width: 310px;
+  padding: 16px 24px;
   color: var(--white);
   background: var(--ink);
-  font-size: 0.9rem;
+  font-family: var(--sans);
+  font-size: 0.76rem;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   transition: transform 180ms ease, background 180ms ease;
+  position: relative;
+  z-index: 1;
 }
 
 .inquire-email:hover {
@@ -599,46 +614,54 @@ a {
 .inquire-steps {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  gap: 24px;
+  gap: 18px;
 }
 
 .step-card {
-  padding: clamp(32px, 4vw, 52px);
-  background: rgba(255, 255, 255, 0.5);
+  padding: clamp(28px, 4vw, 42px);
+  background: rgba(255, 255, 255, 0.54);
   border: 1px solid rgba(17, 17, 17, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 42px rgba(17, 17, 17, 0.07);
 }
 
 .step-number {
-  display: block;
-  margin-bottom: 22px;
+  display: inline-block;
+  margin-bottom: 14px;
   color: var(--gold);
   font-family: var(--serif);
-  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
   font-weight: 500;
-  letter-spacing: 0.02em;
 }
 
 .step-card h2 {
-  margin: 0 0 14px;
+  margin: 0 0 8px;
+  color: var(--ink);
   font-family: var(--sans);
-  font-size: clamp(0.9rem, 1.2vw, 1.08rem);
+  font-size: 0.78rem;
   font-weight: 800;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.2em;
   line-height: 1.4;
   text-transform: uppercase;
-  color: var(--ink);
 }
 
 .step-card p {
   margin: 0;
-  color: rgba(17, 17, 17, 0.66);
-  font-size: clamp(1rem, 1.5vw, 1.22rem);
-  line-height: 1.45;
+  color: rgba(17, 17, 17, 0.68);
+  font-size: 0.94rem;
+  line-height: 1.6;
 }
 
 @media (max-width: 980px) {
   .inquire-page {
-    padding: 38px 24px;
+    padding: 42px 24px;
   }
 
   .inquire-layout {
@@ -656,18 +679,18 @@ a {
 
 @media (max-width: 640px) {
   .inquire-card {
-    padding: 34px 26px;
+    padding: 36px 26px;
   }
 
   .inquire-email {
     width: 100%;
     min-width: 0;
-    padding: 18px 18px;
-    font-size: 0.76rem;
-    letter-spacing: 0.16em;
+    padding: 16px 18px;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
   }
 
   .step-card {
-    padding: 28px 24px;
+    padding: 26px 24px;
   }
 }
