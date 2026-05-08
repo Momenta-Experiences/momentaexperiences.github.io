@@ -1021,3 +1021,18 @@ a {
 .past-event-image.lohri-bonfire-event {
   min-height: 480px;
 }
+
+
+.sangeet-evening-event {
+  background-image: url("assets/sangeet-evening.jpg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--sand);
+}
+
+
+.sangeet-evening-event.past-event-image,
+.past-event-image.sangeet-evening-event {
+  min-height: 520px;
+}
