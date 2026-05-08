@@ -1036,3 +1036,23 @@ a {
 .past-event-image.sangeet-evening-event {
   min-height: 520px;
 }
+
+
+/* Copyright footer for individual service pages */
+.copyright-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 7vw;
+  color: rgba(247, 245, 242, 0.76);
+  background: var(--ink);
+  text-align: center;
+}
+
+.copyright-footer p {
+  margin: 0;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
