@@ -1050,7 +1050,9 @@ a {
 }
 
 .copyright-footer p {
-  margin: 0;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
   font-size: 0.74rem;
   font-weight: 600;
   letter-spacing: 0.16em;
