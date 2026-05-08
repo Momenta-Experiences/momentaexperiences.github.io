@@ -982,4 +982,23 @@ a {
 .seventieth-birthday-event {
   background-image: url("assets/70th-birthday-milestone.jpg");
   background-position: center center;
+  background-size: cover;
+}
+
+
+.girl-scout-yoga-event {
+  background-image: url("assets/girl-scout-kids-yoga.jpg");
+  background-position: center center;
+}
+
+
+.cultural-night-dance-event {
+  background-image: url("assets/interactive-bollywood-dance.jpg");
+  background-position: center center;
+}
+
+
+.seventieth-birthday-event.past-event-image,
+.past-event-image.seventieth-birthday-event {
+  min-height: 430px;
 }
