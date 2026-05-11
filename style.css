@@ -1083,3 +1083,108 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
+/* When clicking Home, show the full hero section including the eyebrow line */
+#home {
+  scroll-margin-top: 0;
+}
+
+/* When clicking Services, start cleanly at the What We Do section */
+#services {
+  scroll-margin-top: 76px;
+}
+
+/* When clicking About, start cleanly at the We Believe section */
+#about {
+  scroll-margin-top: 76px;
+}
+
+
+/* Keep anchor targets flush to the top so the prior section is not visible */
+#home,
+#services,
+#about {
+  scroll-margin-top: 0;
+}
+
+/* Home should show the full hero section */
+#home {
+  scroll-margin-top: 0;
+}
+
+/* Services should begin at What We Do, without hero bottom showing */
+#services {
+  scroll-margin-top: 0;
+}
+
+/* About should begin at We Believe, without services bottom showing */
+#about {
+  scroll-margin-top: 0;
+}
+
+
+/* Keep target sections flush to viewport so previous section does not show */
+#home,
+#services,
+#about {
+  scroll-margin-top: 0;
+}
+
+/* Keep homepage hero aligned so the WE DESIGN line is visible */
+#home {
+  scroll-margin-top: 0;
+}
+
+/* Add header-safe breathing room inside anchor sections */
+#services {
+  padding-top: calc(42px + 74px);
+}
+
+#about {
+  padding-top: calc(42px + 74px);
+}
+
+@media (max-width: 860px) {
+  #services,
+  #about {
+    padding-top: calc(38px + 64px);
+  }
+}
+
+/* Anchor navigation alignment fixes */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 0;
+}
+
+/* Keep Services and About flush so the prior section does not show */
+#services,
+#about {
+  scroll-margin-top: 0;
+}
+
+/* Home needs header offset so the full hero copy, including WE DESIGN, is visible */
+#home {
+  scroll-margin-top: 92px;
+}
+
+/* Add header-safe breathing room inside anchor sections */
+#services {
+  padding-top: calc(42px + 74px);
+}
+
+#about {
+  padding-top: calc(42px + 74px);
+}
+
+@media (max-width: 860px) {
+  #home {
+    scroll-margin-top: 82px;
+  }
+
+  #services,
+  #about {
+    padding-top: calc(38px + 64px);
+  }
+}
