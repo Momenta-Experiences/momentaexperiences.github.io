@@ -1075,3 +1075,10 @@ a {
 .past-event-image.community-diwali-event {
   min-height: 520px;
 }
+
+
+.personalized-one-to-one-event {
+  background-image: url("assets/personalized-one-to-one-services.jpg");
+  background-position: center center;
+  background-size: cover;
+}
