@@ -1060,3 +1060,18 @@ a {
   background-position: center center;
   background-size: cover;
 }
+
+
+.community-diwali-event {
+  background-image: url("assets/community-diwali-celebration.jpg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #180062;
+}
+
+
+.community-diwali-event.past-event-image,
+.past-event-image.community-diwali-event {
+  min-height: 520px;
+}
